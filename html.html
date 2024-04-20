@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko" style="background-color: #000; color: #fff;">
+
+<head>
+    <title>중간고사 대비</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="html">
+    <meta name="description" content="html 태그를 공부합니다">
+    <meta name="author" content="김재훈">
+    <style>
+        @font-face {
+            font-family: 'WavvePADO-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/WavvePADO-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'WavvePADO-Regular';
+            text-decoration-color: #f00;
+        }
+
+        .top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .divClass {
+            width: 300px;
+            height: 150px;
+            border: 5px solid magenta;
+            background-color: lightblue;
+        }
+
+        .spanClass {
+            background-color: red;
+        }
+
+        div {
+            color: #000;
+        }
+
+        h2 {
+            color: aquamarine;
+        }
+
+        h3 {
+            color: rgb(9, 161, 255);
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+        }
+
+        area {
+            border: 1px solid black;
+        }
+
+        nav {
+            font-size: xx-large;
+        }
+
+        #search {
+            position: fixed;
+            right: 0;
+            top: 250px;
+            width: 350px;
+        }
+
+        #login {
+            position: fixed;
+            right: 0;
+            top: 50px;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body link="pink" vlink="pink" alink="red" id="top">
+    <header>
+        <a href="#top"><img src="TOP.png" alt="TOP" class="top"></a>
+        <h1>HTML 공부하기</h1>
+        <nav>
+            <a href="#hn">hn</a>&nbsp;&nbsp;&nbsp;
+            <a href="#text">text</a>&nbsp;&nbsp;&nbsp;
+            <a href="#graphic">graphic</a>&nbsp;&nbsp;&nbsp;
+            <a href="#list">list</a>&nbsp;&nbsp;&nbsp;
+            <a href="#img">img</a>&nbsp;&nbsp;&nbsp;
+            <a href="#audio">audio</a>&nbsp;&nbsp;&nbsp;
+            <a href="#map">ImageMap</a>&nbsp;&nbsp;&nbsp;
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main>
+        <section id="hn">
+            <h2>hn</h2>
+            <article>
+                <h3 style="color: #fff;">h3로 작성된 글</h3>
+                <h4>h4로 작성된 글</h4>
+                <h5>h5로 작성된 글</h5>
+                <h6>h6로 작성된 글</h6>
+            </article>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="text">
+            <h2>text</h2>
+            <article>
+                <blockquote>
+                    block quote는 p처럼 한줄을 띄웁니다
+                </blockquote>
+                strong <strong>strong</strong><br>
+                b <b>bold</b><br><br>
+                em <em>emphasize</em><br><br>
+                i <i>italic</i><br><br>
+                mark <mark>yellow backgound</mark><br><br>
+                u <u>underline</u><br><br>
+                abbr 쉽고 재미있는 <abbr title="Hypertext Markup Language">HTML</abbr><br><br>
+                cite <cite>모나리자</cite>는 레오나르도 다 빈치가 그린 초상화의 이름입니다<br><br>
+                small <small>small</small><br><br>
+                sub log<sub>10</sub>100 = 2<br><br>
+                sup 2<sup>2</sup> = 4<br><br>
+                s <s>strike</s><br><br>
+                insert<ins>inserted sentense</ins><br><br>
+                del<del>delete</del><br>
+            </article>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="graphic">
+            <h2>Graphic</h2>
+            <article>
+                <h3>hr</h3>
+                hr no option
+                <hr>
+                hr width 50% align left
+                <hr width="50%" align="left">
+                hr width 50% no align
+                <hr width="50%">
+                hr width 50
+                <hr width="50">
+                hr width 50% align right
+                <hr width="50%" align="right">
+                hr width 50% size 50%
+                <hr width="50%" size="50%">
+                hr width 50% size 50
+                <hr width="50%" size="50">
+                hr width 50% size 50% noshade
+                <hr width="50%" size="50%" noshade="noshade">
+            </article>
+            <article>
+                <h3>div and span</h3>
+                div without style
+                <div>
+                    스타일 없는 디브입니다
+                </div>
+                div no text with style
+                <div class="divClass"></div>
+                div text one line
+                <div class="divClass">
+                    안녕하세요
+                </div>
+                div text multiple lines
+                <div class="divClass">
+                    안녕하세요 현재 웹을 공부하고 있습니다 현재 공부중인 범위는 중간고사입니다<br>
+                    디브는 스타일로 너비와 높이를 지정하면 너비를 벗어나서 글이 작성되지 않습니다
+                </div>
+                span in div
+                <div class="divClass">
+                    안녕하세요 현재
+                    <span class="spanClass">웹</span>을 공부하고 있습니다 현재 공부중인 범위는
+                    <span class="spanClass">중간고사</span>입니다<br>
+                    디브는 자동으로 앞뒤로 br을 합니다<br>
+                    스팬은 인라인 요소로 자동 줄넘김을 하지 않습니다 웹과 중간고사를 스팬으로 작성했습니다
+                </div>
+            </article>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="list">
+            <h2>List</h2>
+            <article>
+                <h3>ordered list : ol</h3>
+                ol type 1 start -1 reversed
+                <ol type="1" start="-1" reversed="reversed">
+                    <li>수학</li>
+                    <li>영어</li>
+                </ol>
+                ol type 1 no start
+                <ol type="1">
+                    <li>수학</li>
+                    <li>영어</li>
+                </ol>
+                ol type a
+                <ol type="a">
+                    <li>짱구</li>
+                    <li>유리</li>
+                </ol>
+                ol type i
+                <ol type="i">
+                    <li>짱구</li>
+                    <li>유리</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>unordered list : ul</h3>
+                ul tpye circle
+                <ul type="circle">
+                    <li>circle</li>
+                </ul>
+                ul tpye disk
+                <ul type="disk">
+                    <li>disk</li>
+                </ul>
+                ul tpye rect
+                <ul type="square">
+                    <li>rect</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>definition list : dl</h3>
+                <dl>
+                    중간고사
+                    <blockquote>
+                        <dt>1일차</dt>
+                        <dd>빅데이터 처리</dd>
+                        <dt>3일차</dt>
+                        <dd>웹기초</dd>
+                        <dd>자바</dd>
+                        <dt>4일차</dt>
+                        <dd>사물인터넷</dd>
+                        <dt>5일차</dt>
+                        <dd>운영체제</dd>
+                        <dd>컴구조</dd>
+                    </blockquote>
+                </dl>
+            </article>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="table">
+            <h2 style="text-align: center;">time table</h2>
+            <article>
+                <table bgcolor="white" border="1" align="center" cellspacing="0" cellpadding="20"
+                    style="text-align: center; color: #000;">
+                    <colgroup>
+                        <col>
+                        <col style="background-color:  gray; width: 200px;" span="5">
+                    </colgroup>
+                    <thead>
+                        <tr style="background-color: #fff;">
+                            <th></th>
+                            <th>월요일</th>
+                            <th>화요일</th>
+                            <th>수요일</th>
+                            <th>목요일</th>
+                            <th>금요일</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>9시</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" style="background-color: hsl(141, 100%, 50%);">웹기초</td>
+                            <td></td>
+                            <td rowspan="3" style="background-color: #6dceff;">운영체제</td>
+                        </tr>
+                        <tr>
+                            <th>10시</th>
+                            <td></td>
+                            <td rowspan="2" style="background-color: rgb(255, 178, 255);">자바</td>
+                            <td rowspan="2" style="background-color: hsl(141, 100%, 50%);">웹기초</td>
+                        </tr>
+                        <tr>
+                            <th>11시</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>12시</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>13시</th>
+                            <td rowspan="4" style="background-color: moccasin;">빅데이터</td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="3" style="background-color: #f00;">사물인터넷</td>
+                            <td rowspan="3" style="background-color: aqua;">컴구조</td>
+                        </tr>
+                        <tr>
+                            <th>14시</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>15시</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>16시</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2" style="background-color: rgb(255, 178, 255);">자바</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>17시</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="img">
+            <h2>Img</h2>
+            <article>
+                naver
+                <figure>
+                    <a href="http://www.naver.com" target="win"><img src="TOP.png" alt="naver" title="naver"
+                            align="top"></a>
+                    <figcaption>go to naver</figcaption>
+                </figure>
+
+                google
+                <figure>
+                    <a href="http://www.google.com" target="win"><img src="TOP.png" alt="google" title="google"
+                            align="middle"></a>
+                    <figcaption>go to google</figcaption>
+                </figure>
+
+                youtube
+                <figure>
+                    <a href="http://www.youtube.com" target="win"><img src="TOP.png" alt="youtube" title="youtube"
+                            align="bottom"></a>
+                    <figcaption>go to youtube</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="audio">
+            <h2>audio</h2>
+            <article>
+                <audio src="./learningweb/could not love.mp3" loop controls autoplay muted></audio>
+            </article>
+        </section>
+
+        <section id="video">
+            <h2>video</h2>
+            <article>
+                <video src="./learningweb/could not love.mp4" loop muted controls poster="./images/bg3.png" width="500"
+                    height="300"></video>
+            </article>
+        </section>
+
+        <section id="map">
+            <h2>image map</h2>
+            <article>
+                <img src="/learningweb/red.png" alt="red" usemap="#red" width="50%">
+                <map name="red">
+                    <area shape="circle" coords="400, 270, 100" href="http://www.naver.com" target="_blank ">
+                </map>
+            </article>
+        </section>
+
+        <section></section>
+    </main>
+    <span style="background-color: #f00;">span</span><span style="background-color: #f00;">span</span>
+
+    <aside id="login">
+        <form name="login" action="" target="_blank" method="post" autocomplete="on">
+            <fieldset>
+                <legend>로그인</legend>
+                로그인 하면 이 창이 사라집니다<br><br>
+                <label for="uid">아이디&nbsp;&nbsp;&nbsp;&nbsp; : </label>
+                <input type="text" name="user_id" id="uid" minlength="8" maxlength="20" size="20"><br><br>
+                <label for="upw">비밀번호 : </label>
+                <input type="password" name="user_password" id="upw" minlength="8" maxlength="20" size="20"><br><br>
+                <button>로그인</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;회원이 아니라면 <a href="signup.html"
+                    target="_blank">회원가입</a>
+            </fieldset>
+        </form>
+    </aside>
+
+    <aside id="search">
+        <fieldset>
+            <legend>검색 사이트</legend>
+            <form name="youtube" method="get" action="https://www.youtube.com/results?" target="_blank"
+                autocomplete="off">
+                공부 중 모르는 게 있으면 바로 검색해보세요<br><br>
+                <label>유튜브 : <input type="search" name="search_query" id="yt" size="25"></label>
+                <input type="submit" name="ok_button" value="검색">
+            </form>
+            <br>
+            <form name="google" method="get" action="https://www.google.com/search?" target="_blank" autocomplete="off">
+                <label>구글&nbsp;&nbsp;&nbsp;&nbsp; : <input type="search" name="q" id="gg" size="25"></label>
+                <input type="submit" name="ok_button" value="검색">
+            </form>
+            <br>
+            <form name="naver" method="get" action="https://search.naver.com/search.naver?" target="_blank"
+                autocomplete="off">
+                <label>네이버 : <input type="search" name="query" id="nv" size="25"></label>
+                <input type="submit" name="ok_button" value="검색">
+            </form>
+        </fieldset>
+    </aside>
+
+    <footer>
+        <p>Copyright 2024. All Rights Reserved.</p>
+        <nav><a href="#top">top</a></nav>
+    </footer>
+</body>
+
+</html>

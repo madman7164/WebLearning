@@ -1,0 +1,50 @@
+html {
+    background-color: rgb(237, 230, 208);
+    color: black ;
+}
+
+legend {
+    text-align: center;
+}
+
+form {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input {
+    background-color: transparent;
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: gray solid 1px
+}
+label {
+    display: inline-block;
+    border-right: 1px solid gray;
+    width: 100px; /* 원하는 너비로 조정 */
+    text-align: left;
+    margin-right: 5px; /* 레이블과 인풋 사이의 간격 조정 */
+}
+
+label.not {
+    display: initial;
+    border-right: initial;
+    width: initial; /* 원하는 너비로 조정 */
+    text-align: initial;
+    margin-right: initial; /* 레이블과 인풋 사이의 간격 조정 */
+}
+
+input[type="number"] {
+    width:370px;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        @font-face {
+            font-family: 'YEONGJUSeonbiTTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/YEONGJUSeonbiTTF.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        section {
+            font-size: 0.9em;
+        }
+
+        a {
+            font-family: 'YEONGJUSeonbiTTF';
+            text-decoration-line: none;
+        }
+
+        a>span {
+            margin-top: 10px;
+            padding-top: 0;
+            font-size: 0.6em;
+        }
+
+        .subtitle {
+            color: magenta
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        article {
+            font-size: 30px;
+        }
+
+        .font {
+            font: 900 italic 36px/100%;
+        }
+    </style>
+</head>
+
+<body style="font-size: 50px;">
+    <header style="text-align: center;">
+        <span style="font-weight: bold">CSS</span>
+        <nav id="nav">
+            <div>
+                <a href="#font"><span>Font</span></a>
+                <a href="#text"><span>Text</span></a>
+                <a href="#list"><span>List</span></a>
+                <a href="#table"><span>Table</span></a>
+                <a href="#box"><span>Box</span></a>
+                <a href="#border"><span>Border</span></a>
+                <a href="#margin"><span>Margin</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main style="font-family: 'YEONGJUSeonbiTTF';">
+        <hr>
+        <section id="font">
+            <div class="subtitle">Font</div>
+            <article>
+                <span style="color:blue">패밀리 지정하는 법 </span>
+                <br>
+                <code
+                    style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;</code>순서대로 검색
+                <br>
+                <br>
+            </article>
+            <article>
+                <span style="color:blue">사이즈 지정하는 법 (부모 크기 30px)</span>
+                <br>
+                font-size:
+                <span style="font-size: xx-small;">xx-small<span style="font-size: 10px;"> 10px = xx-small</span></span>,
+                <span style="font-size: x-small;">x-small<span style="font-size: 10px;"> 10px = x-small</span></span>,
+                <span style="font-size: small;">small<span style="font-size: 12px;"> 12px = small</span></span>,
+                <span style="font-size: medium;">medium<span style="font-size: 16px;"> 16px = medium</span></span>,
+                <span style="font-size: large;">large<span style="font-size: 18px;"> 18px = large</span></span>,
+                <span style="font-size: x-large;">x-large<span style="font-size: 24px;"> 24px = x-large</span></span>,
+                <span style="font-size: xx-large;">xx-large<span style="font-size: 32px;"> 32px = xx-large</span></span>
+                <br>
+
+                font-size:
+                <span style="font-size: smaller;">smaller<span style="font-size: 25px;"> 30px(article) * 5/6 = 25px = smaller</span></span>
+                <span style="font-size: larger;">larger<span style="font-size: 36px;"> 30px(article) * 6/5 = 36px = larger</span></span>
+                <br>
+
+                font-size:
+                <span style="font-size: 1em;">1em<span style="font-size: 30px;"> 1em = parents' size</span></span>,
+                <span style="font-size: 1rem;">1rem<span style="font-size: 16px;"> 1rem = html's size(default 16 px)</span></span>,
+                <span style="font-size: 1ex;">1ex<span style="font-size: 19px;"> 19px(현재 폰트에서 19px가 소문자 x의 크기) = 1ex</span></span>,
+                <span style="font-size: 20px;">20px = <span style="font-size: 15pt;">(20 * 0.75)pt</span></span>,
+                <span style="font-size: 150%;">150% = <span style="font-size: 45px;">(30 * 1.5)px</span></span>
+                <br>
+                <br>
+
+                <article><span style="color:blue">이탤릭 지정하는 법 </span>
+                    <br>
+                    font-style:
+                    <span style="font-style: normal;">normal</span>,
+                    <span style="font-style: italic;">italic</span>,
+                    <span style="font-style: oblique;">oblique</span>
+                    <br>
+                    <br>
+                </article>
+
+
+                <article>
+                    <span style="color:blue">두께 지정하는 법 </span>
+                    <br>
+                    font-weight:
+                    <div style="font-family: Helvetica">
+                        <span style="font-weight: lighter">lighter</span>,
+                        <span style="font-weight: normal">normal</span>,
+                        <span style="font-weight: bold">bold</span>,
+                        <span style="font-weight: bolder">bolder</span>,
+                        <span style="font-weight: 100">100</span>,
+                        <span style="font-weight: 200">200</span>,
+                        <span style="font-weight: 300">300</span>,
+                        <span style="font-weight: 400">400 = normal</span>,
+                        <span style="font-weight: 500">500</span>,
+                        <span style="font-weight: 600">600</span>,
+                        <span style="font-weight: 700">700 = bold</span>,
+                        <span style="font-weight: 800">800</span>,
+                        <span style="font-weight: 900">900</span>
+                    </div>
+                </article>
+                <br>
+
+                <article>
+                    <span style="color:blue">소문자 지정하는 법</span>
+                    <br>
+                    font-variant:
+                    <span style="font-variant: normal">normal</span>,
+                    <span style="font-variant: small-caps">small-caps</span>,
+                </article>
+                <br>
+
+                <article>
+                    <span style="color:blue">한번에 지정하는 법</span>
+                    <br>
+                    font:
+                    <span style="font:bold italic small-caps 30px Arial">font:bold italic small-caps 30px Arial </span>
+                </article>
+        </section>
+        <hr>
+        <section id="text">
+            <div class="subtitle">Text</div>
+
+            <article>
+                <span style="color:blue">색 지정하는 법 </span>
+                <br>
+                color:
+                <span style="color: red">red</span>,
+                <span style="color: #ff0000">#ff0000</span>,
+                <span style="color: rgb(255,0,0)">rgb(255, 0, 0)</span>,
+                <span style="color: hsl(0, 100%, 50%)">hsl(0, 100%, 50%)</span>,
+                <span style="color: rgba(255, 0, 0, 0.5)">rgba(255, 0, 0, 0.5)</span>,
+                <span style="color: hsla(0, 100%, 50%, 0.5)">hsla(0, 100%, 50%, 0.5)</span>,
+                <span style="opacity: 0.5">opacity: 0.5</span>
+            </article>
+            <br>
+
+            <article style="text-align: center;">
+                <span style="color:blue">정렬방식 지정하는 법 </span>
+                <br>
+                text-align:
+                <span style="display: inline-block; width:220px; background-color: #ff0000; text-align: left;">left</span>,
+                <span style="display: inline-block; width:220px; background-color: #ff0000; text-align: right;">right</span>,
+                <span style="display: inline-block; width:220px; background-color: #ff0000; text-align: center;">center</span>,
+                <span style="display: inline-block; width:220px; background-color: #ff0000; text-align: justify;">justify</span>,
+                <span style="display: inline-block; width:280px; background-color: #ff0000; text-align: match-parent;">match-parent</span>,
+                <span style="display: inline-block; width:220px; background-color: #ff0000; text-align: start;">start</span>,
+                <span style="display: inline-block; width:220px; background-color: #ff0000; text-align: end;">end</span>
+            </article>
+            <br>
+
+            <article style="text-align: justify;">
+                <span style="color:blue">마지막 줄 정렬방식 지정하는 법 </span>
+                <br>
+                text-align-last:
+                <span style="display: inline-block; width:400px; background-color: #ff0000; text-align-last: left;">left left left left left left left left</span>,
+                <span style="display: inline-block; width:400px; background-color: #ff0000; text-align-last: right;">right right right right right right right</span>,
+                <span style="display: inline-block; width:400px; background-color: #ff0000; text-align-last: center;">center center center center center center</span>,
+                <span style="display: inline-block; width:400px; background-color: #ff0000; text-align-last: justify;">justify justify justify justify justify justify</span>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">줄간격 지정하는 법</span>
+                <br>
+                <div style="display:inline-block; position: relative; top: -40px;">line-height:</div>
+                <div style="text-align: center; display: inline-block;">
+                    <span style="display: inline-block; line-height: 3; width:380px; height: 180px; background-color: #ff0000;">3 <br> 3</span>
+                    <span style="display: inline-block; line-height: 300%; width:380px; height: 180px; background-color: #ff0000;">300% <br> 300%</span>
+                    <span style="display: inline-block; line-height: 90px; width:380px; height: 180px; background-color: #ff0000;">90px <br> 90px</span>
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">텍스트에 줄긋는 법</span>
+                <br>
+                text-decoration-line:
+                <span style="text-decoration-line: underline;">underline</span> ,
+                <span style="text-decoration-line: overline;">overline</span> ,
+                <span style="text-decoration-line: line-through;">line-through</span>
+                <br>
+
+                text-decoration-color:
+                <span style="text-decoration-line: underline; text-decoration-color: #ff0000;">#ff0000</span>
+                <br>
+
+                text-decoration-color:
+                <span style="text-decoration-line: underline; text-decoration-style: solid;">solid</span> ,
+                <span style="text-decoration-line: underline; text-decoration-style: double;">double</span> ,
+                <span style="text-decoration-line: underline; text-decoration-style: dotted;">dotted</span> ,
+                <span style="text-decoration-line: underline; text-decoration-style: dashed;">dashed</span> ,
+                <span style="text-decoration-line: underline; text-decoration-style: wavy;">wavy</span>
+                <br>
+                <br>
+
+                text-decoration:
+                <span style="text-decoration: wavy red overline">wavy red overline</span>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">텍스트 그림자 지정하는 법</span>
+                <br>
+                text-shadow:
+                <span style="text-shadow: 30px 30px 5px red;">text-shadow: 30px 30px 5px red</span>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">텍스트 변환하는 법</span>
+                <br>
+                text-transform:
+                <span style="text-transform: capitalize;">capitalize</span>
+                <span style="text-transform: uppercase;">uppercase</span>
+                <span style="text-transform: lowercase;">LOWERCASE</span>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">자간격 지정하는 법</span>
+                <br>
+                letter-spacing:
+                <span style="letter-spacing: 10px;">capitalize</span>
+                <br>
+
+                word-spacing:
+                <span style="word-spacing: 40px">uppercase LOWERCASE</span>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">들여쓰기 지정하는 법</span>
+                <br>
+                text-indent:
+                <p style="text-indent: 50px">50px</p>
+                <p style="text-indent: 20%">20%</p>
+            </article>
+        </section>
+        <hr>
+        
+        <section id="list">
+            <div class="subtitle">list</div>
+            <article>
+                <span style="color:blue;">리스트 기호 지정하는 법</span>
+                <br>
+                list-style-type:
+                <ul>
+                    <li style="list-style-type: circle;">circle</li>
+                    <li style="list-style-type: disc;">disk</li>
+                    <li style="list-style-type: square;">square</li>
+                </ul>
+                ol start 10 reversed position style="list-style-type: inside
+                <ol start="10" reversed style="list-style-position: inside;">
+                    <li style="list-style-type: decimal;">decimal</li>
+                    <li style="list-style-type: decimal-leading-zero;">decimal-leading-zero</li>
+                    <li style="list-style-type: lower-alpha;">lower-alpha</li>
+                    <li style="list-style-type: lower-roman;">lower-roman</li>
+                </ol>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">리스트 기호 이미지 지정하는 법</span>
+                <br>
+                list-style-image:
+                <ul style="list-style-position:inside">
+                    <li style="list-style-image: url(./png/TOP.png);">url()</li>
+                    <li style="list-style-image: url(./png/TOP.png);">url()</li>
+                    <li style="list-style-image: url(./png/TOP.png);">url()</li>
+                </ul>   
+            </article>
+        </section>
+        <hr>
+
+        <section id="table">
+            <div class="subtitle">Table</div>
+            <article>
+                <span style="color:blue;">표의 제목의 위치 지정하는 법</span>
+                <br>
+                <div style="display:inline-block; position: relative; top: -40px;">caption-side:</div>
+                <div style="display:inline-block">
+                    <table border="1" cellspacing="0" cellpadding="10" style="caption-side: top;">
+                        <caption>top</caption>
+                        <tr>
+                            <td>1행 1열</td>
+                            <td>1행 2열</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table border="1" cellspacing="0" cellpadding="10" style="caption-side: bottom;">
+                        <caption>bottom</caption>
+                        <tr>
+                            <td>1행 1열</td>
+                            <td>1행 2열</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">표의 테두리선 지정하는 법</span>
+                <br>
+                <div style="display:inline-block; position: relative; top: -50px;">border:</div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px dotted red; font-size: 20px;">
+                        <tr>
+                            <td>10px dotted red</td>
+                        </tr>
+                        <tr>
+                            <td>10px dotted red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px dashed red; font-size: 20px;">
+                        <tr>
+                            <td>10px dashed red</td>
+                        </tr>
+                        <tr>
+                            <td>10px dashed red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px solid red; font-size: 20px;">
+                        <tr>
+                            <td>10px solid red</td>
+                        </tr>
+                        <tr>
+                            <td>10px solid red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px double red; font-size: 20px;">
+                        <tr>
+                            <td>10px double red</td>
+                        </tr>
+                        <tr>
+                            <td>10px double red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px groove red; font-size: 20px;">
+                        <tr>
+                            <td>10px groove red</td>
+                        </tr>
+                        <tr>
+                            <td>10px groove red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px ridge red; font-size: 20px;">
+                        <tr>
+                            <td>10px ridge red</td>
+                        </tr>
+                        <tr>
+                            <td>10px ridge red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px inset red; font-size: 20px;">
+                        <tr>
+                            <td>10px inset red</td>
+                        </tr>
+                        <tr>
+                            <td>10px inset red</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="0" cellpadding="10" style="border: 10px outset red; font-size: 20px;">
+                        <tr>
+                            <td>10px outset red</td>
+                        </tr>
+                        <tr>
+                            <td>10px outset red</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">표의 내부선 분리여부 지정</span>
+                <br>
+                <div style="display:inline-block; position: relative; top: -50px;">border-collapse:</div>
+                <div style="display:inline-block">
+                    <table cellspacing="10" style="border: 3px solid black; border-collapse: separate; border-spacing: 0px; empty-cells:show;">
+                        <tr>
+                            <td>separate no border cell </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 3px solid black;">border-spacing: 100px 50px</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 3px solid black;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="display:inline-block">
+                    <table cellspacing="10" style="border:5px solid black; border-collapse: collapse; height: 200px;">
+                        <tr style="border: 3px solid black">
+                            <td>tr border: 3px solid black</td>
+                        </tr>
+                        <tr>
+                            <td>collapse</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <br>
+        </section>
+        <hr>
+
+        <section id="box">
+            <div class="subtitle">Box</div>
+            <article>
+                <span style="color:blue;">박스의 너비 값의 범위 정하는 법</span>
+                <br>
+                box-sizing:
+                <div style="box-sizing: content-box; border: 10px solid black; margin: 0px; width: 350px; padding: 0px;">
+                    content-box(기본값) border 10px solid black margin 0px width 350px
+                </div>  
+                <div style="box-sizing: border-box; border: 50px solid black; margin: 0px; width: 370px;">
+                    border-box border 50px solid black margin 0px width 370px
+                </div>
+                <div style="box-sizing: content-box; border: 10px solid black; margin: 0px; width: 270px; padding: 40px;">
+                    content-box(기본값) border 10px solid black margin 0px width 270px padding 40px
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <span style="color:blue;">박스의 그림자 지정하는 법</span>
+                <br>
+                <div>
+                    <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; margin: 0px; width: 350px; padding: 0px;
+                    box-shadow: 50px 50px 100px 100px;">
+                        box-shadow: 50px 50px 100px 100px;
+                    </div>  
+                    <div style="display: inline-block; box-sizing: border-box; border: 10px solid black; margin: 100px; width: 370px;
+                                box-shadow: 50px 50px 0px 0px inset red;">
+                        box-shadow: 50px 50px 0px 0px inset red;
+                    </div>
+                    
+                    <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; margin: 0px; width: 270px; padding: 40px;
+                                box-shadow: 50px 50px 0px 100px;">
+                        box-shadow: 50px 50px 0px 100px;
+                    </div>
+                </div>
+            </article>
+        </section>
+        <br><br><br>
+        <hr>
+
+        <section id="border">
+            <div class="subtitle">Border</div>
+            <article>
+                <span style="color:blue;">테두리 지정하는 법</span><br><br>
+                <div style="display: inline-block; width: 20%; vertical-align: top; box-sizing: border-box; margin: 0px; border-style: dotted;
+                            border-width: 10px; border-color: red;">
+                    border-style: dotted border-width: 10px border-color: red
+                </div>
+                <div style="display: inline-block; width: 20%; vertical-align: top; box-sizing: border-box; margin: 0px; border-style: dotted solid;
+                            border-width: 15px 10px;border-color: red blue;">
+                    border-style: dotted solid border-width: 15px 10px; border-color: red blue;
+                </div>
+                <div style="display: inline-block; width: 20%; vertical-align: top; box-sizing: border-box; margin: 0px; border-style: dotted solid ridge;
+                            border-width: 3px 9px 18px; border-color: red blue green;">
+                    border-style: dotted solid ridge border-width: 3px 9px 18px border-color: red blue green;
+                </div>
+                <div style="display: inline-block; width: 30%; vertical-align: top; box-sizing: border-box; border: 10px dotted magenta">
+                    border: 10px dotted magenta;
+                </div>
+            </article>
+            <br>
+
+            <article>
+                <div style="color: blue">둥근 모서리 지정하는 법</div>
+                <span style="position: relative; top: 0px;">border-radius:</span>
+
+                <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; 
+                            margin: 0px; width: 300px; height: 300px; border-radius: 100px; text-align: center; line-height: 10;">
+                    100px
+                </div>  
+                <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; 
+                            margin: 0px; width: 300px; height: 300px; border-radius: 100%; text-align: center; line-height: 10; ">
+                    100%;
+                </div>
+                <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; 
+                            margin: 0px; width: 300px; height: 300px; border-radius: 100px/150px; text-align: center; line-height: 10; ">
+                    100px/150px
+                </div>
+                <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; 
+                            margin: 0px; width: 300px; height: 300px; border-radius: 50%/100px; text-align: center; line-height: 10; ">
+                    50%/100px
+                </div>
+                <div style="display: inline-block; box-sizing: content-box; border: 10px solid black; 
+                            margin: 0px; width: 300px; height: 300px; border-radius: 500% 100px; text-align: center; line-height: 10; ">
+                    500% 100px
+                </div>
+            </article>
+        </section>
+        <hr>
+
+        <section id="margin">
+            <div class="subtitle">Margin</div>
+            <article>
+                <div style="font-size:0px">
+                    <div style="margin:0px; height: 200px; background-color: black; border: 0px; padding: 0px;"></div>
+                    <div>
+                        <div style="display: inline-block; margin:0px; width: 200px; height: 200px; background-color: black; border: 0px; margin-right: 743px; padding: 0px;"></div>
+                        <div style="display: inline-block; margin:0px; width: 200px; height: 200px; background-color: black; border: 0px; margin-left: 744px; padding: 0px;"></div>
+                    </div>
+                    <div style="margin:0px; height: 200px; background-color: black; border: 0px; padding: 0px"></div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
